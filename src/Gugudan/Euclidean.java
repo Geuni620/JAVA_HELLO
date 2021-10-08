@@ -1,3 +1,4 @@
+package Gugudan;
 
 public class Euclidean {	
 	public static void main(String[] args) {

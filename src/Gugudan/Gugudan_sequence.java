@@ -1,3 +1,4 @@
+package Gugudan;
 public class Gugudan_sequence {
 	public static void main(String[] args) {
 	

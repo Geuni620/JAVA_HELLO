@@ -1,3 +1,4 @@
+package Gugudan;
 public class Gugudan_ex3 {
 	public static int[] calculate(int times) {
 		int[] result = new int[9];

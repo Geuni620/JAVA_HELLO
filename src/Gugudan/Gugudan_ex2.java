@@ -1,3 +1,4 @@
+package Gugudan;
 public class Gugudan_ex2 {
 	public static void main(String[] args) {
 		//6단 구현

@@ -1,3 +1,4 @@
+package Gugudan;
 //import java.util.Scanner;
 //public class Gugudan_ex_if {
 //	public static void main(String[] args) {
