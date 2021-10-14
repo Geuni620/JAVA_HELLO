@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Gugudan_ex {
+public class Gugudan_subject2 {
 	public static void main(String[] args) {
 		System.out.println("사용자가 입력한 값은? : ");
 		Scanner scanner = new Scanner(System.in);
