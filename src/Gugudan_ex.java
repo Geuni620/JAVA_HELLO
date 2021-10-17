@@ -1,21 +1,20 @@
-import java.util.Scanner;
-
 public class Gugudan_ex {
-	public static void main(String[] args) {
-		System.out.println("사용자가 입력한 값은? : ");
-		Scanner scanner = new Scanner(System.in);
-		String inputValue = scanner.nextLine();
-		
-		String[] splitedValue = inputValue.split(",");
-		
-		int first = Integer.parseInt(splitedValue[0]);
-		int second = Integer.parseInt(splitedValue[1]);
-		
-		for(int i = 2; i <= first; i++) {
-			for(int j = 1; j <= second; j++) {
-				System.out.println(i*j);
-			}
+	public static int[] calculate(int times) {
+		int[] result = new int[9];
+		for(int i = 0; i < result.length; i++) {
+			result[i] = times * (i);
 		}
-		
+		return result;
+		}
+	public static void print(int[] result) {
+		for(int i = 1; i < result.length; i++) {
+			System.out.println(result[i]);
+		}
+	}
+	public static void main(String[] args) {
+		for(int i = 0; i < 10; i++) {
+			int[] result = calculate(i);
+			print(result);
+		}
 	}
 }
