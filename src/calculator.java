@@ -1,26 +1,5 @@
 import java.util.Scanner;
 public class calculator{
-	static int getFirstValue(Scanner scanner) {
-		System.out.println("첫 번째 입력 값 : ");
-		int first = scanner.nextInt();
-		System.out.println(first);
-		return first;
-	}
-	
-	static String getSymbol(Scanner scanner) {
-		System.out.println("기호 : ");
-		String symbol = scanner.next();
-		System.out.println(symbol);
-		return symbol;
-	}
-	
-	static int getSecondValue(Scanner scanner) {
-		System.out.println("두 번째 입력 값 : ");
-		int second = scanner.nextInt();
-		System.out.println(second);
-		return second;
-	}
-	
 	static int calculator(int first, String symbol, int second) {
 		int result = 0;
 		if(symbol.equals("+")) {
@@ -40,26 +19,23 @@ public class calculator{
 		}
 		return result;
 	}
-	static void print(int result) {
-		System.out.println("최종 결과 값 : "+ result);
-	}
-	
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-	
-		int first = getFirstValue(scanner);
-	
-		int result = first;
+		
+		int result = Input.getFirstValue(scanner);
+		
 		while(true) {
-			String symbol = getSymbol(scanner);
-				
+			String symbol = Input.getSymbol(scanner);
+			
 			if("quit".equals(symbol)) {
-				System.out.println(result);
+				Output.print(result);
 				break;
 			}
-			int second = getSecondValue(scanner);
+			
+			int second = Input.getSecondValue(scanner);
 			
 			result = calculator(result, symbol, second);
-		}
+		}		
+		scanner.close();
 	}
 }
